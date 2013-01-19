@@ -1,0 +1,20 @@
+import math
+import io
+
+ouput = io.open("LightsData",'w');
+
+thetaStart = -2*math.pi
+thetaEnd   =  2*math.pi
+thetaCount =  100
+deltaTheta =  (thetaEnd-thetaStart)/thetaCount
+iRange = range(1,thetaCount,1)
+
+theta  = thetaStart
+
+for i in range(1,thetaCount,1):
+	output.write("%f  %f" %(theta, math.sin(theta)))
+
+	
+output.close()
+
+
